@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f8f8;
+    }
+    .product-container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      display: flex;
+      gap: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product-image img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      font-size: 1.5em;
+      color: #e53935;
+      margin-bottom: 20px;
+    }
+    .product-description {
+      margin-bottom: 30px;
+      line-height: 1.5;
+      color: #555;
+    }
+    .quantity-label {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      max-width: 200px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="nm.jpg" alt="Product Name" />
+    </div>
+    <div class="product-details">
+      <h1 class="product-title">Awesome Product</h1>
+      <p class="product-price">$49.99</p>
+      <p class="product-description">
+        This is a detailed description of the awesome product. It highlights key features, specifications, and why you should buy it. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      
+      <label for="quantity" class="quantity-label">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1" />
+      
+      <button type="button" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+ <script>
+  function addToCart() {
+    const quantity = document.getElementById('quantity').value;
+    alert(`Added ${quantity} item(s) to the cart!`);
+    // Here you can add your real add-to-cart logic
+  }
+</script>
+
+
+</body>
+</html>
